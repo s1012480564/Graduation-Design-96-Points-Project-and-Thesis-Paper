@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+    <title>基于方面的情感分析系统</title>
+    <link href="/static/css/ABSA_style.css" type="text/css" rel="stylesheet"/>
+    <script src='/static/echarts.min.js'></script>
+    <script src='/static/jquery-1.8.3.min.js'></script>
+</head>
+<body>
+<img id="logo" src="/static/images/logo.png" />
+<p><span id="title">基于方面的情感分析系统</span></p>
+<form id='frm'>
+    <input type="text" id="text_id" class="text_cls" name="text" placeholder="请输入需要分析情感的英文句子（最大长度85）"/>
+    <select class='opt_asp_l' id='asp_l' name='asp_l'>
+        <option selected value="0">(请选择情感对象词组(方面词)的起始位置)</option>
+        <option value='1'>1</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5</option>
+        <option value='6'>6</option>
+        <option value='7'>7</option>
+        <option value='8'>8</option>
+        <option value='9'>9</option>
+        <option value='10'>10</option>
+        <option value='11'>11</option>
+        <option value='12'>12</option>
+        <option value='13'>13</option>
+        <option value='14'>14</option>
+        <option value='15'>15</option>
+        <option value='16'>16</option>
+        <option value='17'>17</option>
+        <option value='18'>18</option>
+        <option value='19'>19</option>
+        <option value='20'>20</option>
+        <option value='21'>21</option>
+        <option value='22'>22</option>
+        <option value='23'>23</option>
+        <option value='24'>24</option>
+        <option value='25'>25</option>
+        <option value='26'>26</option>
+        <option value='27'>27</option>
+        <option value='28'>28</option>
+        <option value='29'>29</option>
+        <option value='30'>30</option>
+        <option value='31'>31</option>
+        <option value='32'>32</option>
+        <option value='33'>33</option>
+        <option value='34'>34</option>
+        <option value='35'>35</option>
+        <option value='36'>36</option>
+        <option value='37'>37</option>
+        <option value='38'>38</option>
+        <option value='39'>39</option>
+        <option value='40'>40</option>
+        <option value='41'>41</option>
+        <option value='42'>42</option>
+        <option value='43'>43</option>
+        <option value='44'>44</option>
+        <option value='45'>45</option>
+        <option value='46'>46</option>
+        <option value='47'>47</option>
+        <option value='48'>48</option>
+        <option value='49'>49</option>
+        <option value='50'>50</option>
+        <option value='51'>51</option>
+        <option value='52'>52</option>
+        <option value='53'>53</option>
+        <option value='54'>54</option>
+        <option value='55'>55</option>
+        <option value='56'>56</option>
+        <option value='57'>57</option>
+        <option value='58'>58</option>
+        <option value='59'>59</option>
+        <option value='60'>60</option>
+        <option value='61'>61</option>
+        <option value='62'>62</option>
+        <option value='63'>63</option>
+        <option value='64'>64</option>
+        <option value='65'>65</option>
+        <option value='66'>66</option>
+        <option value='67'>67</option>
+        <option value='68'>68</option>
+        <option value='69'>69</option>
+        <option value='70'>70</option>
+        <option value='71'>71</option>
+        <option value='72'>72</option>
+        <option value='73'>73</option>
+        <option value='74'>74</option>
+        <option value='75'>75</option>
+        <option value='76'>76</option>
+        <option value='77'>77</option>
+        <option value='78'>78</option>
+        <option value='79'>79</option>
+        <option value='80'>80</option>
+        <option value='81'>81</option>
+        <option value='82'>82</option>
+        <option value='83'>83</option>
+        <option value='84'>84</option>
+        <option value='85'>85</option>
+    </select>
+    <select class='opt_asp_r' id='asp_r' name='asp_r'>
+        <option selected value="0">(请选择情感对象词组(方面词)的终止位置)</option>
+        <option value='1'>1</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5</option>
+        <option value='6'>6</option>
+        <option value='7'>7</option>
+        <option value='8'>8</option>
+        <option value='9'>9</option>
+        <option value='10'>10</option>
+        <option value='11'>11</option>
+        <option value='12'>12</option>
+        <option value='13'>13</option>
+        <option value='14'>14</option>
+        <option value='15'>15</option>
+        <option value='16'>16</option>
+        <option value='17'>17</option>
+        <option value='18'>18</option>
+        <option value='19'>19</option>
+        <option value='20'>20</option>
+        <option value='21'>21</option>
+        <option value='22'>22</option>
+        <option value='23'>23</option>
+        <option value='24'>24</option>
+        <option value='25'>25</option>
+        <option value='26'>26</option>
+        <option value='27'>27</option>
+        <option value='28'>28</option>
+        <option value='29'>29</option>
+        <option value='30'>30</option>
+        <option value='31'>31</option>
+        <option value='32'>32</option>
+        <option value='33'>33</option>
+        <option value='34'>34</option>
+        <option value='35'>35</option>
+        <option value='36'>36</option>
+        <option value='37'>37</option>
+        <option value='38'>38</option>
+        <option value='39'>39</option>
+        <option value='40'>40</option>
+        <option value='41'>41</option>
+        <option value='42'>42</option>
+        <option value='43'>43</option>
+        <option value='44'>44</option>
+        <option value='45'>45</option>
+        <option value='46'>46</option>
+        <option value='47'>47</option>
+        <option value='48'>48</option>
+        <option value='49'>49</option>
+        <option value='50'>50</option>
+        <option value='51'>51</option>
+        <option value='52'>52</option>
+        <option value='53'>53</option>
+        <option value='54'>54</option>
+        <option value='55'>55</option>
+        <option value='56'>56</option>
+        <option value='57'>57</option>
+        <option value='58'>58</option>
+        <option value='59'>59</option>
+        <option value='60'>60</option>
+        <option value='61'>61</option>
+        <option value='62'>62</option>
+        <option value='63'>63</option>
+        <option value='64'>64</option>
+        <option value='65'>65</option>
+        <option value='66'>66</option>
+        <option value='67'>67</option>
+        <option value='68'>68</option>
+        <option value='69'>69</option>
+        <option value='70'>70</option>
+        <option value='71'>71</option>
+        <option value='72'>72</option>
+        <option value='73'>73</option>
+        <option value='74'>74</option>
+        <option value='75'>75</option>
+        <option value='76'>76</option>
+        <option value='77'>77</option>
+        <option value='78'>78</option>
+        <option value='79'>79</option>
+        <option value='80'>80</option>
+        <option value='81'>81</option>
+        <option value='82'>82</option>
+        <option value='83'>83</option>
+        <option value='84'>84</option>
+        <option value='85'>85</option>
+    </select>
+</form>
+<button class="submit" onclick="fun()">情感分析</button>
+<p><span id="polarity_id" class="polarity_cls"></span></p>
+<div id="dom" class="chart"></div>
+<script>
+    function fun(){
+        var params=$("#frm").serialize();
+        var text=$("#text").val();
+        var asp_l=$("#asp_l").val();
+        var asp_r=$("#asp_r").val();
+        if(text===""||asp_l==="0"||asp_r==="0") return;
+        $.getJSON(
+            'get_analysis.do',
+            params,
+            function(data){
+                msg_check=data.check;
+                if(msg_check!=='ok'){
+                    if(msg_check==='r less than l'){
+                        window.alert('输入的方面词结束位置不得小于起始位置');
+                    }
+                    else if(msg_check==='too long'){
+                        window.alert('句子长度不得超过85个单词');
+                    }
+                    else if(msg_check==='aspect position overflow'){
+                        window.alert('方面词位置必须在句子长度以内');
+                    }
+                    return;
+                }
+                window.alert('分析结束')
+                var html="情感极性：";
+                if(data.polarity===-1) html+='消极';
+                else if(data.polarity===0) html+='中性';
+                else if(data.polarity===1) html+='积极';
+                document.getElementById('polarity_id').innerText=html;
+                var myChart=echarts.init(document.getElementById('dom'));
+                var option = {
+                  grid: {
+                    height: '50%',
+                    top: '10%'
+                  },
+                  xAxis: {
+                    type: 'category',
+                    data: data.xtick,
+                    splitArea: {
+                      show: true
+                    },
+                    axisLabel:{
+                      fontSize:12
+                    }
+                  },
+                  yAxis: {
+                    type: 'category',
+                    data: 'y',
+                    splitArea: {
+                      show: true
+                    },
+                    show: false
+                  },
+                  visualMap: {
+                    min: 0,
+                    max: 1,
+                    show: false,
+                    inRange:{
+                      color:['white','rgb(0,153,210)']
+                    }
+                  },
+                  series: [
+                    {
+                      type: 'heatmap',
+                      data: data.weights,
+                    }
+                  ]
+                };
+                myChart.setOption(option,true);
+            }
+        )
+    }
+</script>
+</body>
+</html>

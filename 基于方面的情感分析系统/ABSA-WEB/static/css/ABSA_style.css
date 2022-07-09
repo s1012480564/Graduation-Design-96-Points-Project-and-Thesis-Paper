@@ -1,0 +1,76 @@
+#logo{
+    position:absolute;
+    left:820px;
+    top:10px;
+    width:284px;
+    height:284px;
+}
+#title {
+    position:absolute;
+    left:627px;
+    top:305px;
+    width:671px;
+    height:68px;
+    font-family:'Arial Negreta', 'Arial Normal', 'Arial';
+    font-weight:700;
+    font-style:normal;
+    font-size:60px;
+}
+.text_cls{
+    position:absolute;
+    left:463px;
+    top:415px;
+    width:1000px;
+    height:45px;
+    font-size:20px;
+}
+.opt_asp_l{
+    position:absolute;
+    left:463px;
+    top:490px;
+    width:400px;
+    height:36px;
+    font-family:'Arial Negreta', 'Arial Normal', 'Arial';
+    font-style:normal;
+    font-size:20px;
+}
+.opt_asp_r{
+    position:absolute;
+    left:1063px;
+    top:490px;
+    width:400px;
+    height:36px;
+    font-family:'Arial Negreta', 'Arial Normal', 'Arial';
+    font-style:normal;
+    font-size:20px;
+}
+.submit{
+    position:absolute;
+    left:893px;
+    top:560px;
+    width:140px;
+    height:36px;
+    font-family:'Arial Negreta', 'Arial Normal', 'Arial';
+    font-style:normal;
+    font-size:20px;
+}
+.polarity_cls{
+    position:absolute;
+    left:795px;
+    top:615px;
+    width:337px;
+    height:55px;
+    font-family:'Arial Negreta', 'Arial Normal', 'Arial';
+    font-weight:700;
+    font-style:normal;
+    font-size:48px;
+    color:#FF0000;
+    text-align:center;
+}
+.chart{
+    position:absolute;
+    left:50px;
+    top:680px;
+    width:1800px;
+    height:120px;
+}
